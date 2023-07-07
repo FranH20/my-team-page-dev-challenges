@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+figure { margin: 0 }
+
+.content__container {
+    padding: 0.5rem;
+    max-width: 700px;
+    margin: auto;
+}
+.content__title-container {
+    display: flex;
+    flex-direction: column;
+}
+.content__title {
+    font-family: 'PT Serif';
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.10125rem;
+}
+.content__subtitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.content__description-container {
+    max-width: 333px;
+}
+.content__description {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+.content__crew:nth-child(even) {
+    align-self: end;
+}
+.content__crews-container {
+    margin: 3rem 0.2rem;
+    display: grid;
+    grid-auto-rows: 22rem;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+.content__crew-image {
+    width: 8.66994rem;
+    height: 13.0625rem;
+    max-width: 238px;
+    cursor: pointer;
+    transition: all 200ms;
+}
+.content__crew-image:hover {
+    transform: scale(1.02);
+}
+.content__crew-image-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.2rem;
+}
+.content__crew-profession {
+    font-family: PT Serif;
+    font-size: 0.625rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+}
+.content__crew-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.footer {
+    font-family: Montserrat;
+    text-align: center;
+    margin-bottom: -50px;
+}
+.footer__message {
+    color: #BDBDBD;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 2rem;
+}
+.footer__author {
+    color: #BDBDBD;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 650px) {
+    .content__container {
+        padding-top: 3rem;
+    }
+    .content__title-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .content__title {
+        margin: 0;
+    }
+    .content__crews-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .content__crew {
+        align-self: start;
+    }
+    .content__crew:nth-child(even) {
+        align-self: start;
+    }
+    .content__crew:nth-child(3n-1) {
+        align-self: end;
+    }
+}
